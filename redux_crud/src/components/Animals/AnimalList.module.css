@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.buttonWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.animalCards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.animalCard {
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}

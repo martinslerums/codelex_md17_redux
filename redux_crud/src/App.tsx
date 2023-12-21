@@ -6,6 +6,7 @@ function App() {
 
   return (
     <div>
+      <h1>Ferma</h1>
       <AnimalsList />
       <AnimalsForm />
     </div>
