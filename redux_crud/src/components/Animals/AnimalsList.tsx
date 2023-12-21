@@ -14,7 +14,7 @@ export const AnimalsList = () => {
         {animals.map((animal: Animal) => (
           <div key={animal.id}>
             {editingAnimal === animal.id ? (
-              <form>
+              <form onSubmit={() => dispatch(editAnimal(animal))}>
                 <input type="text" placeholder="animal" required />
                 <input type="text" placeholder="photoUrl" required />
                 <button type="submit">Save</button>
