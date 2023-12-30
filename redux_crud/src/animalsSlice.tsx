@@ -22,12 +22,12 @@ const animalSlice = createSlice({
   name: "animals",
   initialState,
   reducers: {
-    getAnimals: () => {
-      const localStorageAnimals = JSON.parse(localStorage.getItem("animals"));
+    getAnimals: (state) => {
+      const localStorageAnimals = JSON.parse(localStorage.getItem("animals") || "[]")
       if (localStorageAnimals) {
         return localStorageAnimals;
       }
-      return (<div>No anjimals found</div>);
+      return state
     },
     addAnimal: (state, action: PayloadAction<Animal>) => {
       state.push(action.payload);
@@ -36,7 +36,7 @@ const animalSlice = createSlice({
     deleteAnimal: (state, action: PayloadAction<string>) => {
       const animalId = action.payload;
       const index = state.findIndex((animal) => animal.id === animalId);
-    
+
       state.splice(index, 1);
       localStorage.setItem("animals", JSON.stringify(state));
     },

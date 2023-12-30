@@ -12,8 +12,7 @@ import { RootState } from "../../store";
 import { FormEvent, useEffect, useState } from "react";
 
 export const AnimalsList = () => {
-  const [editingAnimalId, setEditingAnimalId] = useState<string>("");
-
+  const [editingAnimalId, setEditingAnimalId] = useState("");
   const [editedAnimalName, setEditedAnimalName] = useState("");
   const [editedAnimalPhoto, setEditedAnimalPhoto] = useState("");
 
